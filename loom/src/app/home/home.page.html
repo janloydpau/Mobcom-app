@@ -1,0 +1,85 @@
+<ion-tabs>
+  <ion-tab tab="note" class="container"> 
+    <ion-nav id="note-nav"></ion-nav>
+    <div id="note-page">
+      <ion-header>
+        <ion-toolbar>
+          <div class="upper">
+            <ion-title>Notes</ion-title>
+            <ion-button class="profile" slot="end" fill="clear">
+              <img src="assets/profile.svg" alt="Profile"/>
+            </ion-button>
+          </div>
+          <ion-searchbar class="note_search" animated="true" placeholder="Search"></ion-searchbar>
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+          <ion-fab-button class="note_add">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-content>
+    </div>
+  </ion-tab>
+  
+
+
+  <!-- tasks -->
+  <ion-tab tab="task" class="container"> 
+    <ion-nav id="task-nav"></ion-nav>
+    <div id="task-page">
+      <ion-header>
+        <ion-toolbar>
+          <div class="upper">
+            <ion-title>Tasks</ion-title>
+            <ion-button class="profile" slot="end" fill="clear">
+              <img src="assets/profile.svg" alt="Profile"/>
+            </ion-button>
+          </div>
+          <ion-searchbar class="task_search" animated="true" placeholder="Search"></ion-searchbar>
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+          <ion-fab-button class="note_add">
+            <ion-icon name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-content>
+    </div>
+  </ion-tab>
+  
+
+  <!--tabs -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="note">
+      <ion-icon name="play-circle"></ion-icon>
+      Notes
+    </ion-tab-button>
+    <ion-tab-button tab="task">
+      <ion-icon name="radio"></ion-icon>
+      Tasks
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+<script>
+  const homeNav = document.querySelector('#home-nav');
+  const homePage = document.querySelector('#home-page');
+  homeNav.root = homePage;
+
+  const radioNav = document.querySelector('#radio-nav');
+  const radioPage = document.querySelector('#radio-page');
+  radioNav.root = radioPage;
+
+  const libraryNav = document.querySelector('#library-nav');
+  const libraryPage = document.querySelector('#library-page');
+  libraryNav.root = libraryPage;
+
+  const searchNav = document.querySelector('#search-nav');
+  const searchPage = document.querySelector('#search-page');
+  searchNav.root = searchPage;
+</script>

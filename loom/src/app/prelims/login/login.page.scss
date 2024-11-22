@@ -1,0 +1,97 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 50px;
+  }
+
+.header h1{
+    font-weight: bold;
+}
+.header p{
+    text-align: center;
+    margin-top: 0px;
+}
+  
+  /* Flexbox for card */
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+.text-button {
+    background: none;
+    border: none;
+    color: blue; /* Initial text color */
+    cursor: pointer;
+    padding: 0;
+  }
+
+.text-button:active {
+    color: purple; /* Text color when clicked */
+  }
+
+.register-button {
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: blue; /* Initial text color */
+    cursor: pointer;
+    padding: 0;
+  }
+
+.register-button:active {
+    color: purple; /* Text color when clicked */
+  }
+
+.full-button {
+    width: 100%;           /* Makes the button full-width */
+    padding: 10px;         /* Adds some padding for better appearance */
+    background-color: blue; /* Background color */
+    color: white;          /* Text color */
+    border: none;          /* Removes the border */
+    border-radius: 20px;    /* Optional: rounded corners */
+    cursor: pointer;       /* Pointer cursor on hover */
+    font-size: 16px;       /* Adjust text size as needed */
+  }
+
+.full-button:active {
+    background-color: darkblue; /* Change color when clicked */
+  }
+
+.hollow-button {
+    width: 100%;           /* Makes the button full-width */
+    padding: 10px;         /* Adds some padding for better appearance */
+    background-color: white; /* Background color */
+    color: blue;          /* Text color */
+    border: 1px solid blue;          /* Removes the border */
+    border-radius: 20px;    /* Optional: rounded corners */
+    cursor: pointer;       /* Pointer cursor on hover */
+    font-size: 16px;       /* Adjust text size as needed */
+ }
+ .hollow-button,.full-button{
+    margin-bottom: 25px;
+ }
+.hollow-button:active {
+    background-color:whitesmoke; /* Change color when clicked */
+  }
+
+
+.google{
+    margin-bottom: -3px;
+}
+
+.reg{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+small{
+  padding-left: 20px;
+}

@@ -1,0 +1,77 @@
+<div class="header">
+  <img src="assets/turtle.png" alt="turtle">
+  <h1>Let's log you in!</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>
+
+<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+  <div class="card">
+    <!-- Email Input with Floating Label and validation -->
+    <ion-item class="label" [class.invalid]="emailField?.invalid && emailField?.touched">
+      <ion-input 
+        name="email" 
+        label="Email" 
+        label-placement="floating" 
+        placeholder="juandelacruz@gmail.com" 
+        [(ngModel)]="email" 
+        required 
+        email
+        #emailField="ngModel">
+      </ion-input>
+    </ion-item>
+    <div *ngIf="emailField?.invalid && emailField?.touched" class="error-message">
+      <small *ngIf="emailField?.errors?.['required']">Email is required</small>
+      <small *ngIf="emailField?.errors?.['email']">Please enter a valid email</small>
+    </div>
+
+    <!-- Password Input with Floating Label and validation -->
+    <ion-item class="label" [class.invalid]="passwordField?.invalid && passwordField?.touched">
+      <ion-input 
+        name="password" 
+        label="Password" 
+        label-placement="floating" 
+        placeholder="Password" 
+        [(ngModel)]="password" 
+        required 
+        minlength="8" 
+        [type]="showPassword ? 'text' : 'password'" 
+        #passwordField="ngModel">
+      </ion-input>
+    
+      <ion-icon 
+        *ngIf="password" 
+        [name]="showPassword ? 'eye-off' : 'eye'" 
+        slot="end" 
+        (click)="togglePasswordVisibility()">
+      </ion-icon>
+    </ion-item>
+    
+    <div *ngIf="passwordField?.invalid && passwordField?.touched" class="error-message">
+      <small *ngIf="passwordField?.errors?.['required']">Password is required</small>
+      <small *ngIf="passwordField?.errors?.['minlength']">Password must be at least 8 characters long</small>
+    </div>
+
+    <!-- Forgot Password link -->
+    <ion-item lines="none">
+      <button slot="end" class="text-button" [disabled]="!loginForm.valid">Forgot Password?</button>
+    </ion-item>
+    
+    <!-- Submit Button (disabled if form is invalid) -->
+    <ion-item lines="none">
+      <button type="submit" class="full-button" [disabled]="!loginForm.valid">Log in</button>
+    </ion-item>
+    
+    <!-- Google Login Button -->
+    <ion-item lines="none">
+      <button class="hollow-button">
+        <ion-icon class="google" name="logo-google" slot="start"></ion-icon>
+        Log in with Google
+      </button>
+    </ion-item>
+
+    <!-- Register link -->
+    <ion-item style="margin-top: -10px;" lines="none">
+      <ion-text class="reg"><p>Don't have an account? <button type="button" class="register-button" (click)="navigateToSignup($event)">Register</button></p></ion-text>
+    </ion-item>
+  </div>
+</form>

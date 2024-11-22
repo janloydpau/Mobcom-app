@@ -1,0 +1,7 @@
+{
+  "name": "loom",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,32 @@
+ion-title{
+  padding: 16px;
+  font-weight: bolder;
+  font-family: Tahoma;
+  font-size: 1.8em;
+}
+ion-searchbar{
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  --border-radius: 20px;
+  --box-shadow: none;
+  --background: whitesmoke;
+}
+.profile img{
+  width: 30px; 
+  height: 30px;
+}
+.upper{
+  display: flex;
+}
+ion-content{
+  height: 76vh;
+  --background: rgb(169, 51, 51);
+}
+ion-fab{
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+ion-tab-bar{
+  width: 100%;
+}

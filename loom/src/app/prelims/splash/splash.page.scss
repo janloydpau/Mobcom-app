@@ -1,0 +1,79 @@
+/* splash.page.scss */
+ion-content {
+    position: relative; /* Allow positioning of the background and content */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  ion-content img {
+    position: absolute; /* Position the image behind the content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep image in the background */
+  }
+  
+  .page-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-container {
+    position: absolute; /* Position the card container absolutely */
+    bottom: 0; /* Place it at the bottom of the screen */
+    left: 0;
+    width: 100%; /* Make it cover the full width */
+    height: 50vh; /* Height reaches near the middle of the screen */
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 30px; /* Rounded top left corner */
+    border-top-right-radius: 30px; /* Rounded top right corner */
+    padding: 20px; /* Padding inside the card */
+  }
+  
+  .card-container h1 {
+    font-weight: bolder;
+  }
+  .card-container .appname{
+    color: pink;
+  }
+  
+  p {
+    font-size: 15px;
+    margin-bottom: 100px;
+  }
+  
+  .button-container {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    gap: 10px;
+  }
+  
+  .b1 {
+    border-radius: 40px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    height: 50px;
+    width: 200px;
+  }
+  .b1:active{
+    background-color: #0652a3; /* Primary color */
+  }
+  
+   .b2 {
+    border-radius: 40px;
+    border: 1px solid blue;
+    color: blue;
+    height: 50px;
+    width: 200px;
+    background-color: white;
+   }
+   .b2:active{
+    background-color: whitesmoke;
+   }
